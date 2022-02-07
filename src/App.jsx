@@ -17,8 +17,8 @@ const App = () => {
   const getBeers = async () => {
     const apiBeers = await fetchBeers();
 
-    setBeers(apiBeers);
-    // console.log(beers);
+    return setBeers(apiBeers);
+    console.log(beers);
   };
 
   useEffect(() => {
@@ -26,16 +26,20 @@ const App = () => {
     getBeers();
   }, []);
 
+  // const getCardFront = (beers) => <CardFront key={beers.id} beers={beers} />;
+
   return (
     <>
-      <CardFront />
-      <CardBack />
+      <CardList beers={beers} />
+      {/* <section>{beers.map(getCardFront)}</section> */}
+      {/* // <CardFront beers={beers} /> */}
+      {/* <CardBack />
       <Card />
-      <CardList />
-      <SideNav />
+      <CardList beers={beers} /> */}
+      {/* <SideNav />
       <SearchBar />
       <SearchButtons />
-      <NotFound />
+      <NotFound /> */}
     </>
   );
 };
