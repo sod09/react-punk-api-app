@@ -16,17 +16,12 @@ const App = () => {
 
   const getBeers = async () => {
     const apiBeers = await fetchBeers();
-
     return setBeers(apiBeers);
-    console.log(beers);
   };
 
   useEffect(() => {
-    console.log(beers);
     getBeers();
   }, []);
-
-  // const getCardFront = (beers) => <CardFront key={beers.id} beers={beers} />;
 
   return (
     <>

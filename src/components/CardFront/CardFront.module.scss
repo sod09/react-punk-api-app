@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+
+.cardFront {
+  // border: solid 2px $tertiary-color-transparent;
+  box-shadow: 2px 2px $tertiary-color-transparent;
+  border-radius: 10px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $primary-color-transparent;
+  margin: 5px;
+  padding: 5px;
+
+  img {
+    background-color: transparent;
+    width: auto;
+    height: 200px;
+    margin: 2px;
+  }
+
+  .textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    width: 95%;
+    margin: 2px 2px;
+    border-radius: 10px;
+
+    h2 {
+      color: $tertiary-color;
+      text-align: center;
+      font-size: 1.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tagline {
+      font-style: italic;
+      text-align: center;
+    }
+
+    .abvdetails {
+      background-color: $secondary-color-transparent;
+    }
+  }
+}
