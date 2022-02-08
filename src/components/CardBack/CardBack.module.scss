@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.cardBack {
+  // border: solid 2px $tertiary-color-transparent;
+  box-shadow: 2px 2px $tertiary-color-transparent;
+  border-radius: 10px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("../../assets/beer-g7f8e29a9b_1920.jpg");
+  background-size: 100% 100%;
+  margin: 5px;
+  padding: 5px;
+
+  .textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    width: 95%;
+    margin: 2px 2px;
+    border-radius: 10px;
+    height: 100%;
+
+    .description {
+      font-style: italic;
+      text-align: center;
+    }
+
+    .food {
+      text-align: center;
+    }
+  }
+}

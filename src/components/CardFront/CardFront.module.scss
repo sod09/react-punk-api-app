@@ -2,14 +2,16 @@
 
 .cardFront {
   // border: solid 2px $tertiary-color-transparent;
-  box-shadow: 2px 2px $tertiary-color-transparent;
+  box-shadow: 2px 2px $primary-color-transparent;
+  border: 2px solid $primary-color;
   border-radius: 10px;
-  width: 15%;
+
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  background-color: $primary-color-transparent;
+  background-color: $secondary-color;
   margin: 5px;
   padding: 5px;
 
@@ -24,15 +26,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $secondary-color;
+    background-color: $primary-color;
     width: 95%;
     margin: 2px 2px;
     border-radius: 10px;
+    height: 55%;
 
     h2 {
-      color: $tertiary-color;
+      color: $main-white;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -40,10 +43,14 @@
     .tagline {
       font-style: italic;
       text-align: center;
+      color: $main-white;
     }
 
+    // .brewdate {
+    // }
+
     .abvdetails {
-      background-color: $secondary-color-transparent;
+      color: $main-white;
     }
   }
 }

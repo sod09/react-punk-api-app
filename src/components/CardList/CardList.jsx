@@ -10,15 +10,11 @@ const CardList = (props) => {
   const getCardJsx = (beers) => (
     <div>
       <Card beers={beers} key={beers.id} />
-      {/*     
-    <CardFront beers={beers} key={beers.id} />
-    <CardBack beers={beers} key={beers.id} /> */}
     </div>
   );
 
   return (
     <div>
-      CardList working!
       <section className={styles.cards}>{beers.map(getCardJsx)}</section>
     </div>
   );

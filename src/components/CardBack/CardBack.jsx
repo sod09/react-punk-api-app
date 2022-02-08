@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./CardBack.module.scss";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CardBack = (props) => {
-  const { first_brewed, description, food_pairing } = props.beers;
+  const { description, food_pairing } = props.beers;
 
   return (
-    <div className={styles.CardBack}>
-      <section className={styles.cardDetails}>
-        <p>{first_brewed}</p>
-        <p>{description}</p>
-        <p>{food_pairing}</p>
+    <div className={styles.cardBack}>
+      <section className={styles.textArea}>
+        <p className={styles.description}>{description}</p>
+        <i class="fas fa-utensils"></i>
+        <p className={styles.food}>{food_pairing}</p>
       </section>
     </div>
   );
