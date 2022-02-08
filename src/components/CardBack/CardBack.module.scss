@@ -24,13 +24,59 @@
     border-radius: 10px;
     height: 100%;
 
-    .description {
-      font-style: italic;
-      text-align: center;
+    .iconBeer {
+      display: flex;
+      font-size: 30px;
     }
 
-    .food {
-      text-align: center;
+    .descriptionArea {
+      height: 50%;
+      overflow: scroll;
+      overflow-x: hidden;
+      padding: 5px;
+
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px $primary-color;
+        -webkit-box-shadow: inset 0 0 6px $primary-color;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+      }
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #f5f5f5;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px $primary-color;
+        -webkit-box-shadow: inset 0 0 6px $primary-color;
+        background-color: $primary-color;
+      }
+
+      .descriptionOpener {
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .description {
+        text-align: center;
+      }
+    }
+
+    .foodArea {
+      height: 30%;
+      padding: 5px;
+
+      .iconFood {
+        align-items: center;
+        font-size: 30px;
+      }
+
+      .foodPairingInfo {
+        text-align: center;
+        font-style: italic;
+      }
     }
   }
 }

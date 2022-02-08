@@ -1,0 +1,21 @@
+@import "../../variables.scss";
+
+.sideNavContainer {
+  background-color: $tertiary-color;
+  color: $main-white;
+  width: 30%;
+  padding: 20px;
+  height: 100vh;
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .sideNavSearch {
+    margin: 50px;
+  }
+
+  .sideNavButtons {
+    margin: 50px;
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.searchButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  color: $main-white;
+  margin-top: 20px;
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: larger;
+  }
+}

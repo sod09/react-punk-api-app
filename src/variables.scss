@@ -7,3 +7,15 @@ $main-white: #ffff;
 $primary-color-transparent: rgba(51, 209, 159, 0.85);
 $secondary-color-transparent: rgba(245, 245, 245, 0.85);
 $tertiary-color-transparent: rgba(18, 18, 18, 0.85);
+
+%card {
+  height: 100%;
+  width: 100%;
+
+  background-color: white;
+  position: absolute;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
