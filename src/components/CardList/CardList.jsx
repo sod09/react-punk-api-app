@@ -9,13 +9,15 @@ const CardList = (props) => {
 
   const getCardJsx = (beers) => (
     <div>
-      <Card beers={beers} key={beers.id} />
+      <Card beers={beers} />
     </div>
   );
 
   return (
     <div>
-      <section className={styles.cards}>{beers.map(getCardJsx)}</section>
+      <section key={beers.id} className={styles.cards}>
+        {beers.map(getCardJsx)}
+      </section>
     </div>
   );
 };

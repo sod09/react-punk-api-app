@@ -3,11 +3,16 @@ import SearchBar from "../SearchBar/SearchBar";
 import SearchButtons from "../SearchButtons/SearchButtons";
 import styles from "./SideNav.module.scss";
 
-const SideNav = () => {
+const SideNav = (props) => {
+  const { userBeerSearch } = props;
+
   return (
     <section className={styles.sideNavContainer}>
       <h1>PUNK API</h1>
-      <SearchBar classname={styles.sideNavSearch} />
+      <SearchBar
+        userBeerSearch={userBeerSearch}
+        classname={styles.sideNavSearch}
+      />
       <SearchButtons classname={styles.sideNavButtons} />
     </section>
   );
