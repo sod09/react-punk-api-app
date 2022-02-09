@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBar = (props) => {
-  const { userBeerSearch } = props;
+  const { userBeerSearch, setUserBeerSearch } = props;
 
   return (
     <section className={styles.seachBarContainer}>
@@ -13,7 +13,9 @@ const SearchBar = (props) => {
         className={styles.searchInput}
         type="text"
         placeholder="Search by name..."
-        onInput={(e) => userBeerSearch(e.target.value)}
+        name="s"
+        value={userBeerSearch}
+        onInput={(e) => setUserBeerSearch(e.target.value)}
       ></input>
     </section>
   );

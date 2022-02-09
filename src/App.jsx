@@ -1,14 +1,14 @@
-import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import styles from "./app.module.scss";
 import CardList from "./components/CardList/CardList";
 import SideNav from "./components/SideNav";
-import Card from "./components/Card";
 
+import NotFound from "./components/NotFound/NotFound";
 import { fetchBeers } from "./services/beers.service";
 
 const App = () => {
   const [beers, setBeers] = useState([]);
+  const [userBeerSearch, setUserBeerSearch] = useState();
 
   const getBeers = async () => {
     const apiBeers = await fetchBeers();
@@ -19,16 +19,16 @@ const App = () => {
     getBeers();
   }, []);
 
-  const handleSearch = (userBeerSearch) => {
-    console.log(`get Search working ${userBeerSearch}`);
-    if ((userBeerSearch = "")) {
-      return <CardList className={styles.cardList} beers={beers} />;
-    } else if ((userBeerSearch = !beers.name)) {
-      <alert>"No beers with this name"</alert>;
-    } else if ((userBeerSearch = beers.name)) {
-      return <Card beers={beers} />;
-    }
-  };
+  const matchingBeers = beers.filter((beer) => {
+    const beerName = beer.name.toLowerCase();
+    return beerName.includes(userBeerSearch.toLowerCase());
+  });
+
+  const contentJSX = matchingBeers.length ? (
+    <CardList className={styles.cardList} beers={matchingBeers} />
+  ) : (
+    <NotFound />
+  );
 
   // retrieve user input
   // match user input to beer name and search API
@@ -38,8 +38,12 @@ const App = () => {
   return (
     <>
       <section className={styles.landingPage}>
-        <SideNav userBeerSearch={handleSearch} className={styles.sideNav} />
-        <CardList className={styles.cardList} beers={beers} />
+        <SideNav
+          userBeerSearch={userBeerSearch}
+          setUserBeerSearch={setUserBeerSearch}
+          className={styles.sideNav}
+        />
+        {contentJSX}
       </section>
     </>
   );
