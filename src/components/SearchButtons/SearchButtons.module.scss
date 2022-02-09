@@ -5,6 +5,26 @@
   flex-direction: column;
   color: $main-white;
   margin-top: 20px;
+  font-size: 10px;
+
+  .highAbv {
+    background-color: $primary-color;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .classic {
+    background-color: $primary-color;
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .acidic {
+    background-color: $primary-color;
+    margin: 5px;
+    border-radius: 10px;
+
+  }
 
   input {
     margin-bottom: 10px;
@@ -12,7 +32,7 @@
 
   label {
     font-size: larger;
-    background-color: $primary-color;
+    // background-color: $primary-color;
     padding: 2px;
   }
 }

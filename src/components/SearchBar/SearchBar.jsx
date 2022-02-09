@@ -15,7 +15,7 @@ const SearchBar = (props) => {
         placeholder="Search by name..."
         name="s"
         value={userBeerSearch}
-        onInput={(e) => setUserBeerSearch(e.target.value)}
+        onInput={(e) => setUserBeerSearch(e.target.value.toLowerCase())}
       ></input>
     </section>
   );

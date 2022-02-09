@@ -22,6 +22,8 @@
     margin: 2px;
   }
 
+
+
   .textArea {
     display: flex;
     flex-direction: column;
@@ -36,13 +38,18 @@
       color: $main-white;
       text-align: center;
       font-size: 1.3rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      padding-top: 10px;
+ 
     }
 
     .tagline {
+      
       font-style: italic;
       text-align: center;
+      color: $main-white;
+    }
+
+    .brewdate {
       color: $main-white;
     }
 
@@ -51,6 +58,10 @@
 
     .abvdetails {
       color: $main-white;
+      border: solid $main-white 2px;
+      border-radius: 10px;
+      padding: 10px;
+
     }
   }
 }

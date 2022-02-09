@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Mountains+of+Christmas:wght@700&family=Poppins:wght@300&family=Roboto&display=swap");
+@import "./variables.scss";
 
 * {
   font-family: Roboto;
+  padding: 0px;
 }
 
 .landingPage {
   display: flex;
-
+  
   .sideNav {
     width: 30%;
+    height: 100%;
   }
 }

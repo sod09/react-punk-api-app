@@ -20,4 +20,8 @@
     @extend %card;
     transform: rotateY(180deg);
   }
+
+  ::hover {
+    background-color: $tertiary-color;
+  }
 }

@@ -4,7 +4,7 @@ import SearchButtons from "../SearchButtons/SearchButtons";
 import styles from "./SideNav.module.scss";
 
 const SideNav = (props) => {
-  const { userBeerSearch, setUserBeerSearch } = props;
+  const { userBeerSearch, setUserBeerSearch, abvCheck, setAbvCheck, classicCheck, setClassicCheck, acidicCheck, setAcidicCheck } = props;
 
   return (
     <section className={styles.sideNavContainer}>
@@ -14,7 +14,13 @@ const SideNav = (props) => {
         setUserBeerSearch={setUserBeerSearch}
         classname={styles.sideNavSearch}
       />
-      <SearchButtons classname={styles.sideNavButtons} />
+      <SearchButtons classname={styles.sideNavButtons}
+      abvCheck={abvCheck}
+      setAbvCheck={setAbvCheck}
+      classicCheck={classicCheck}
+      setClassicCheck={setClassicCheck}
+      acidicCheck={acidicCheck}
+      setAcidicCheck={setAcidicCheck} />
     </section>
   );
 };
