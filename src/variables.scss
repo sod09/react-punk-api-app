@@ -11,7 +11,7 @@ $tertiary-color-transparent: rgba(18, 18, 18, 0.85);
 %card {
   height: 100%;
   width: 100%;
-
+  backface-visibility: hidden;
   background-color: white;
   position: absolute;
 

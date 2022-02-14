@@ -4,7 +4,7 @@ import CardFront from "../CardFront";
 import styles from "./Card.module.scss";
 
 const Card = (props) => {
-  const { beers, userBeerSearch } = props;
+  const { beers } = props;
   const [isFaceUp, setIsFaceUp] = useState(false);
 
   const flipCard = isFaceUp ? styles.faceDown : "";

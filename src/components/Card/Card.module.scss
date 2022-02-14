@@ -5,6 +5,7 @@
   width: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
+  perspective: 600px;
   position: relative;
   z-index: 0;
 
@@ -19,9 +20,5 @@
   .back {
     @extend %card;
     transform: rotateY(180deg);
-  }
-
-  ::hover {
-    background-color: $tertiary-color;
   }
 }
