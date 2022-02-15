@@ -62,6 +62,20 @@ return jsonResponse;
 };
 ```
 
+There is also a filter for acidic beers but there is no PUNK API parameter for this.
+So I created a fetch all the same, I then mapped the beers in the data and filtered those beers to find all beers that have a PH > 4.
+
+```
+export const acidicFetch = () => {
+  return fetch("https://api.punkapi.com/v2/beers")
+    .then((res) => res.json())
+    .then((jsonResponse) => {
+      const mapBeers = jsonResponse.map((beer) => beer);
+      const filterAcidicBeers = mapBeers.filter((beer) => beer.ph < 4);
+      return filterAcidicBeers;
+    });
+```
+
 Using props, I created a function called getContentJSX which displays cards in accordance with the users activity displaying the relevant data. If the userBeerSearch state is updated, then it will show beers matching to the users input.
 Using useEffect() if the state is updated for abvCheck, classicCheck and acidicCheck and the radio button is true, it will then display beers in accordance with the relevant fetch parameters.
 
