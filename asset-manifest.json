@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-punk-api-app/static/css/main.eaddcee6.css",
+    "main.js": "/react-punk-api-app/static/js/main.3df7fc12.js",
+    "static/js/787.496bfeb6.chunk.js": "/react-punk-api-app/static/js/787.496bfeb6.chunk.js",
+    "index.html": "/react-punk-api-app/index.html",
+    "main.eaddcee6.css.map": "/react-punk-api-app/static/css/main.eaddcee6.css.map",
+    "main.3df7fc12.js.map": "/react-punk-api-app/static/js/main.3df7fc12.js.map",
+    "787.496bfeb6.chunk.js.map": "/react-punk-api-app/static/js/787.496bfeb6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaddcee6.css",
+    "static/js/main.3df7fc12.js"
+  ]
+}
