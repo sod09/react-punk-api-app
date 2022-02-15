@@ -7,14 +7,14 @@ const SearchBar = (props) => {
   const { userBeerSearch, setUserBeerSearch } = props;
 
   return (
-    <section className={styles.seachBarContainer}>
-      <FontAwesomeIcon className={styles.searchIcon} icon={faSearch} />
+    <section className={styles.searchBar__container}>
+      <FontAwesomeIcon className={styles.searchBar__icon} icon={faSearch} />
       <input
-        className={styles.searchInput}
+        className={styles.searchBar__input}
         type="text"
-        placeholder="Search by name..."
+        placeholder="Search by beer name..."
         name="s"
-        value={userBeerSearch}
+        defaultValue={userBeerSearch}
         onInput={(e) => setUserBeerSearch(e.target.value.toLowerCase())}
       ></input>
     </section>

@@ -12,31 +12,34 @@ const SearchButtons = (props) => {
   } = props;
 
   return (
-    <section className={styles.searchButtonsContainer}>
-      <label className={styles.highAbv}>
+    <section className={styles.radioButtons__container}>
+      <label className={styles.radioButtons__highAbv}>
         <input
+          name="filter"
           type="radio"
-          // value={abvCheck}
+          value={abvCheck}
           onClick={() => {
             setAbvCheck(true);
           }}
         />
-        High ABV (>6%)
+        High ABV >6%
       </label>
 
-      <label className={styles.classic}>
+      <label className={styles.radioButtons__classic}>
         <input
+          name="filter"
           type="radio"
-          // value={classicCheck}
+          value={classicCheck}
           onClick={() => setClassicCheck(true)}
         />
-        Classic Beersssss
+        Classic Beers
       </label>
 
-      <label className={styles.acidic}>
+      <label className={styles.radioButtons__acidic}>
         <input
+          name="filter"
           type="radio"
-          // value={acidicCheck}
+          value={acidicCheck}
           onClick={() => setAcidicCheck(true)}
         />
         Acidic Beers

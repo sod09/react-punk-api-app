@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+.button__reset {
+  background-color: $secondary-color;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 30%;
+
+  margin: 20px 0px;
+  padding: 5px;
+  border: none;
+}
+
+.button__reset:hover {
+  background-color: $secondary-color-monochromatic;
+}

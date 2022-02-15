@@ -76,10 +76,11 @@ const App = () => {
       return <CardList className={styles.cardList} beers={beers} />;
     } else if (classicCheck) {
       return <CardList className={styles.cardList} beers={beers} />;
+    } else {
+      return <NotFound />;
     }
-    // } else if (acidicCheck) {
-    //   return <CardList className={styles.cardList} beers={beers} />;
   };
+
   return (
     <>
       <section className={styles.landingPage}>

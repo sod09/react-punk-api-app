@@ -1,4 +1,12 @@
 @import "../../variables.scss";
 
-.searchBarContainer {
+.searchBar__container {
+  .searchBar__icon {
+    padding: 0px 8px;
+    font-size: 20px;
+  }
+  .searchBar__input {
+    width: 60%;
+    font-size: 15px;
+  }
 }
