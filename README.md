@@ -52,6 +52,7 @@ I then created functions in App.JSX that call data from the relevant fetch (ther
 
 Foe example, I used the PUNK API docs to show all beers that have an ABV > 6 by using the URL parameters.
 
+```
 export const abvFetch = () => {
 return fetch("https://api.punkapi.com/v2/beers?abv_gt=6")
 .then((res) => res.json())
@@ -59,6 +60,7 @@ return fetch("https://api.punkapi.com/v2/beers?abv_gt=6")
 return jsonResponse;
 });
 };
+```
 
 Using props, I created a function called getContentJSX which displays cards in accordance with the users activity displaying the relevant data. If the userBeerSearch state is updated, then it will show beers matching to the users input.
 Using useEffect() if the state is updated for abvCheck, classicCheck and acidicCheck and the radio button is true, it will then display beers in accordance with the relevant fetch parameters.
