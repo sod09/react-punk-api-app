@@ -17,15 +17,15 @@ const SideNav = (props) => {
   } = props;
 
   return (
-    <section className={styles.sideNavContainer}>
+    <section className={styles.sideNav__container}>
       <h1>PUNK API</h1>
       <SearchBar
         userBeerSearch={userBeerSearch}
         setUserBeerSearch={setUserBeerSearch}
-        classname={styles.sideNavSearch}
+        classname={styles.sideNav__searchbar}
       />
       <SearchButtons
-        classname={styles.sideNavButtons}
+        classname={styles.sideNav__filterbuttons}
         abvCheck={abvCheck}
         setAbvCheck={setAbvCheck}
         classicCheck={classicCheck}

@@ -1,10 +1,11 @@
 @import "../../variables.scss";
 
-.cards {
+.cardList__container {
   max-width: 90vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, 275px);
-  grid-gap: 550px 5px;
+  grid-gap: 530px 5px;
   justify-content: space-evenly;
   height: 100%;
+  margin: 5px auto;
 }

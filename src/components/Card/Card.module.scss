@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-.beerCard {
+.card__container {
   height: 100%;
   width: 100%;
   transition: transform 1s;
@@ -13,11 +13,11 @@
     transform: rotateY(180deg);
   }
 
-  .front {
+  .card__front {
     @extend %card;
   }
 
-  .back {
+  .card__back {
     @extend %card;
     transform: rotateY(180deg);
   }

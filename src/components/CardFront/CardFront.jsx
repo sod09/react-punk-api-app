@@ -5,15 +5,15 @@ const CardFront = (props) => {
   const { name, image_url, abv, tagline, first_brewed } = props.beers;
 
   return (
-    <div className={styles.cardFront}>
+    <section className={styles.cardFront__container}>
       <img src={image_url} alt="image of brew" />
-      <section className={styles.textArea}>
+      <section className={styles.cardFront__textArea}>
         <h2>{name}</h2>
-        <p className={styles.tagline}>"{tagline}"</p>
-        <p className={styles.abvdetails}>ABV {abv}%</p>
-        <p className={styles.brewdate}>Est. {first_brewed}</p>
+        <p className={styles.cardFront__tagline}>"{tagline}"</p>
+        <p className={styles.cardFront__brewdate}>Est. {first_brewed}</p>
+        <p className={styles.cardFront__abvdetails}>ABV {abv}%</p>
       </section>
-    </div>
+    </section>
   );
 };
 

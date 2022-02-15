@@ -11,14 +11,14 @@ const Card = (props) => {
 
   return (
     <section
-      className={`${styles.beerCard} ${flipCard}`}
+      className={`${styles.card__container} ${flipCard}`}
       onClick={() => setIsFaceUp(!isFaceUp)}
     >
-      <div className={styles.front}>
+      <div className={styles.card__front}>
         <CardFront beers={beers} />
       </div>
 
-      <div className={styles.back}>
+      <div className={styles.card__back}>
         <CardBack beers={beers} />
       </div>
     </section>

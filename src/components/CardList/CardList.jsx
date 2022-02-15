@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./CardList.module.scss";
 import Card from "../Card";
-import CardFront from "../CardFront";
-import CardBack from "../CardBack";
 
 const CardList = (props) => {
   const { beers } = props;
@@ -15,7 +13,7 @@ const CardList = (props) => {
 
   return (
     <div>
-      <section key={beers.id} className={styles.cards}>
+      <section key={beers.id} className={styles.cardList__container}>
         {beers.map(getCardJsx)}
       </section>
     </div>

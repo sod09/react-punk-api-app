@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-.sideNavContainer {
+.sideNav__container {
   background-color: $tertiary-color;
   color: $main-white;
   width: 30%;
@@ -14,11 +14,11 @@
     font-size: 36px;
   }
 
-  .sideNavSearch {
+  .sideNav__searchbar {
     margin: 50px;
   }
 
-  .sideNavButtons {
+  .sideNav__filterbuttons {
     margin: 50px;
   }
 }

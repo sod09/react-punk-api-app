@@ -1,7 +1,6 @@
 @import "../../variables.scss";
 
-.cardFront {
-  // border: solid 2px $tertiary-color-transparent;
+.cardFront__container {
   box-shadow: 2px 2px $primary-color-transparent;
   border: 2px solid $primary-color;
   border-radius: 10px;
@@ -14,6 +13,8 @@
   background-color: $secondary-color;
   margin: 5px;
   padding: 5px;
+  transform: scale(1);
+  animation: pulse 5s infinite;
 
   img {
     background-color: transparent;
@@ -22,46 +23,62 @@
     margin: 2px;
   }
 
-
-
-  .textArea {
+  .cardFront__textArea {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $primary-color;
     width: 95%;
-    margin: 2px 2px;
+    margin: 10px auto;
     border-radius: 10px;
     height: 55%;
 
     h2 {
-      color: $main-white;
+      color: $tertiary-color;
       text-align: center;
-      font-size: 1.3rem;
-      padding-top: 10px;
- 
+      font-size: 20px;
+      padding-top: 5px;
     }
 
-    .tagline {
-      
+    .cardFront__tagline {
       font-style: italic;
       text-align: center;
       color: $main-white;
+      font-size: 18px;
+      margin: 2px;
     }
 
-    .brewdate {
+    .cardFront__brewdate {
       color: $main-white;
     }
 
-    // .brewdate {
-    // }
-
-    .abvdetails {
+    .cardFront__abvdetails {
       color: $main-white;
       border: solid $main-white 2px;
       border-radius: 10px;
       padding: 10px;
-
+      margin: 10px;
     }
+  }
+}
+
+.cardFront__textArea:hover {
+  background-color: $primary-color-monochromatic;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
