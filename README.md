@@ -34,11 +34,11 @@ I initially created all my components and relevant files. I then used a Fetch me
 This data is then displayed in the CardFront and CardBack components using props.
 I styled the cards so that they flip to show either the front and back, to create a single card component.
 
-<img src="../assets/beercard.gif">
+<img src="../components/assets/beercard.gif">
 
 I then created a presentational CardList component to display the cards in a grid.
 
-<img src="../assets/multibeers.gif">
+<img src="../components/assets/multibeers.gif">
 
 Once the beer cards were displayed in a grid for responsiveness I created a SideNav component with a search bar and radtio filter buttons.
 
@@ -62,7 +62,7 @@ return jsonResponse;
 Using props, I created a function called getContentJSX which displays cards in accordance with the users activity displaying the relevant data. If the userBeerSearch state is updated, then it will show beers matching to the users input.
 Using useEffect() if the state is updated for abvCheck, classicCheck and acidicCheck and the radio button is true, it will then display beers in accordance with the relevant fetch parameters.
 
-<img src="../assets/finalbeers.gif">
+<img src="../components/assets/finalbeers.gif">
 
 For simplicity I styled the project with 3 colours and used the Google Font ROBOTO. I added hover to the buttons and text areas on the cards.
 
