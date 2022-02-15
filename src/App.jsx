@@ -76,10 +76,13 @@ const App = () => {
       return <CardList className={styles.cardList} beers={beers} />;
     } else if (classicCheck) {
       return <CardList className={styles.cardList} beers={beers} />;
-    } else if (userBeerSearch === !userBeerSearch) {
-      return <NotFound />;
     }
   };
+
+  //   else if (userBeerSearch === !userBeerSearch) {
+  //     return <NotFound />;
+  //   }
+  // };
 
   return (
     <>
