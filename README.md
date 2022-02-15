@@ -76,6 +76,10 @@ export const acidicFetch = () => {
     });
 ```
 
+All the fetch() methods sit in a service file and exist purely to call data from the API.
+The data is then retrived in the App.Jsk using an async and await function.
+Once the data is called, it is stored in state.
+
 Using props, I created a function called getContentJSX which displays cards in accordance with the users activity displaying the relevant data. If the userBeerSearch state is updated, then it will show beers matching to the users input.
 Using useEffect() if the state is updated for abvCheck, classicCheck and acidicCheck and the radio button is true, it will then display beers in accordance with the relevant fetch parameters.
 
