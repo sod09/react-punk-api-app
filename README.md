@@ -33,6 +33,7 @@ This was my first attempt at a full ReactJS project.
 I initially created all my components and relevant files. I then used a Fetch method to request the data from the PUNK API.
 This data is then displayed in the CardFront and CardBack components using props.
 I styled the cards so that they flip to show either the front and back, to create a single card component.
+I also included a scroll bar to display the beer description as in some instances it displayed a large amount of text.
 
 <img src="./src/assets/beercard.gif">
 
