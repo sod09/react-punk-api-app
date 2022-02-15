@@ -34,7 +34,7 @@ I initially created all my components and relevant files. I then used a Fetch me
 This data is then displayed in the CardFront and CardBack components using props.
 I styled the cards so that they flip to show either the front and back, to create a single card component.
 
-<img src="../../assets/beercard.gif">
+<img src="./src/assets/beercard.gif">
 
 I then created a presentational CardList component to display the cards in a grid.
 
