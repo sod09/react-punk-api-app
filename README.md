@@ -63,7 +63,7 @@ return jsonResponse;
 ```
 
 There is also a filter for acidic beers but there is no PUNK API parameter for this.
-So I created a fetch all the same, I then mapped the beers in the data and filtered those beers to find all beers that have a PH > 4.
+So I created a fetch all the same, I then mapped the beers in the data and filtered those beers to find all beers that have a PH < 4 which is the criteria for a an acidic beer.....apparently.
 
 ```
 export const acidicFetch = () => {
