@@ -29,7 +29,7 @@ export const acidicFetch = () => {
     .then((res) => res.json())
     .then((jsonResponse) => {
       const mapBeers = jsonResponse.map((beer) => beer);
-      const findAcidicBeers = mapBeers.filter((beer) => beer.ph < 4);
-      return findAcidicBeers;
+      const filterAcidicBeers = mapBeers.filter((beer) => beer.ph < 4);
+      return filterAcidicBeers;
     });
 };

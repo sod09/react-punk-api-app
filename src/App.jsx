@@ -76,7 +76,7 @@ const App = () => {
       return <CardList className={styles.cardList} beers={beers} />;
     } else if (classicCheck) {
       return <CardList className={styles.cardList} beers={beers} />;
-    } else {
+    } else if (userBeerSearch === !userBeerSearch) {
       return <NotFound />;
     }
   };
