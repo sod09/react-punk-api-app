@@ -12,7 +12,7 @@ const SearchBar = (props) => {
       <input
         className={styles.searchBar__input}
         type="text"
-        placeholder="Search by beer name..."
+        placeholder="Search beer name..."
         name="s"
         defaultValue={userBeerSearch}
         onInput={(e) => setUserBeerSearch(e.target.value.toLowerCase())}

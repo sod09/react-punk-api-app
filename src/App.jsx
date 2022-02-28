@@ -20,6 +20,7 @@ const App = () => {
   const [classicCheck, setClassicCheck] = useState(false);
   const [acidicCheck, setAcidicCheck] = useState(false);
 
+  // retrieves the data from the service file and sets state with this data
   const getBeers = async () => {
     const apiBeers = await fetchBeers();
     return setBeers(apiBeers);
@@ -29,10 +30,14 @@ const App = () => {
     getBeers();
   }, []);
 
+  // filters through state, changes search to lower case, returns the beers that match the search term using a boolean
+
   const matchingBeers = beers.filter((beer) => {
     const beerName = beer.name.toLowerCase();
     return beerName.includes(userBeerSearch);
   });
+
+  // IF the abvCheck button is true retrieves the data from the service file of beers with high abv and then resets state to this data
 
   const getHighAbvBeers = async () => {
     if (abvCheck === true) {
@@ -40,6 +45,8 @@ const App = () => {
       return setBeers(highAbvBeers);
     }
   };
+
+  // once abvCheck state has changed to true, it calls the function above to retrieve the data from the service file
 
   useEffect(() => {
     getHighAbvBeers();
@@ -76,13 +83,10 @@ const App = () => {
       return <CardList className={styles.cardList} beers={beers} />;
     } else if (classicCheck) {
       return <CardList className={styles.cardList} beers={beers} />;
+    } else if (acidicCheck) {
+      return <CardList className={styles.cardList} beers={beers} />;
     }
   };
-
-  //   else if (userBeerSearch === !userBeerSearch) {
-  //     return <NotFound />;
-  //   }
-  // };
 
   return (
     <>
