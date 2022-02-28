@@ -10,16 +10,24 @@ export const fetchBeers = () => {
 };
 
 // fetches specific data from the API using the parameter supplied by PUNK API
-export const abvFetch = () => {
-  return fetch("https://api.punkapi.com/v2/beers?abv_gt=6")
-    .then((res) => res.json())
-    .then((jsonResponse) => {
-      return jsonResponse;
-    });
-};
+// export const abvFetch = () => {
+//   return fetch("https://api.punkapi.com/v2/beers?abv_gt=6")
+//     .then((res) => res.json())
+//     .then((jsonResponse) => {
+//       return jsonResponse;
+//     });
+// };
 
-export const classicFetch = () => {
-  return fetch("https://api.punkapi.com/v2/beers?brewed_before=1-2010")
+// export const classicFetch = () => {
+//   return fetch("https://api.punkapi.com/v2/beers?brewed_before=1-2010")
+//     .then((res) => res.json())
+//     .then((jsonResponse) => {
+//       return jsonResponse;
+//     });
+// };
+
+export const beerFilterFetch = (beerParam) => {
+  return fetch(`${API_URL}${beerParam}`)
     .then((res) => res.json())
     .then((jsonResponse) => {
       return jsonResponse;
@@ -39,3 +47,5 @@ export const acidicFetch = () => {
       return filterAcidicBeers;
     });
 };
+
+// refactor abv/classic functions

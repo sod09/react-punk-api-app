@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import styles from "./app.module.scss";
 import CardList from "./components/CardList/CardList";
 import SideNav from "./components/SideNav";
-import NotFound from "./components/NotFound/NotFound";
 
 import {
   fetchBeers,
   abvFetch,
   classicFetch,
   acidicFetch,
+  beerFilterFetch,
 } from "./services/beers.service";
 
 const App = () => {
@@ -16,9 +16,9 @@ const App = () => {
 
   const [userBeerSearch, setUserBeerSearch] = useState();
 
-  const [abvCheck, setAbvCheck] = useState(false);
-  const [classicCheck, setClassicCheck] = useState(false);
-  const [acidicCheck, setAcidicCheck] = useState(false);
+  const [isAbvCheck, setAbvCheck] = useState(false);
+  const [isClassicCheck, setClassicCheck] = useState(false);
+  const [isAcidicCheck, setAcidicCheck] = useState(false);
 
   // retrieves the data from the service file and sets state with this data
   const getBeers = async () => {
@@ -40,8 +40,8 @@ const App = () => {
   // IF the abvCheck button is true retrieves the data from the service file of beers with high abv and then resets state to this data
 
   const getHighAbvBeers = async () => {
-    if (abvCheck === true) {
-      const highAbvBeers = await abvFetch();
+    if (isAbvCheck) {
+      const highAbvBeers = await beerFilterFetch("?abv_gt=6");
       return setBeers(highAbvBeers);
     }
   };
@@ -50,21 +50,21 @@ const App = () => {
 
   useEffect(() => {
     getHighAbvBeers();
-  }, [abvCheck]);
+  }, [isAbvCheck]);
 
   const getClassicBeers = async () => {
-    if (classicCheck === true) {
-      const getClassicBeers = await classicFetch();
+    if (isClassicCheck) {
+      const getClassicBeers = await beerFilterFetch("?brewed_before=1-2010");
       return setBeers(getClassicBeers);
     }
   };
 
   useEffect(() => {
     getClassicBeers();
-  }, [classicCheck]);
+  }, [isClassicCheck]);
 
   const getAcidicBeers = async () => {
-    if (acidicCheck === true) {
+    if (isAcidicCheck) {
       const getAcidicBeers = await acidicFetch();
       return setBeers(getAcidicBeers);
     }
@@ -72,18 +72,28 @@ const App = () => {
 
   useEffect(() => {
     getAcidicBeers();
-  }, [acidicCheck]);
+  }, [isAcidicCheck]);
+
+  // const getContentJSX = () => {
+  //   if (!userBeerSearch) {
+  //     return <CardList className={styles.cardList} beers={beers} />;
+  //   } else if (userBeerSearch) {
+  //     return <CardList className={styles.cardList} beers={matchingBeers} />;
+  //   } else if (abvCheck) {
+  //     return <CardList className={styles.cardList} beers={beers} />;
+  //   } else if (classicCheck) {
+  //     return <CardList className={styles.cardList} beers={beers} />;
+  //   } else if (acidicCheck) {
+  //     return <CardList className={styles.cardList} beers={beers} />;
+  //   }
+  // };
 
   const getContentJSX = () => {
     if (!userBeerSearch) {
       return <CardList className={styles.cardList} beers={beers} />;
     } else if (userBeerSearch) {
       return <CardList className={styles.cardList} beers={matchingBeers} />;
-    } else if (abvCheck) {
-      return <CardList className={styles.cardList} beers={beers} />;
-    } else if (classicCheck) {
-      return <CardList className={styles.cardList} beers={beers} />;
-    } else if (acidicCheck) {
+    } else {
       return <CardList className={styles.cardList} beers={beers} />;
     }
   };
@@ -94,11 +104,11 @@ const App = () => {
         <SideNav
           userBeerSearch={userBeerSearch}
           setUserBeerSearch={setUserBeerSearch}
-          abvCheck={abvCheck}
+          abvCheck={isAbvCheck}
           setAbvCheck={setAbvCheck}
-          classicCheck={classicCheck}
+          classicCheck={isClassicCheck}
           setClassicCheck={setClassicCheck}
-          acidicCheck={acidicCheck}
+          acidicCheck={isAcidicCheck}
           setAcidicCheck={setAcidicCheck}
         />
 

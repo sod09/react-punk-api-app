@@ -3,11 +3,11 @@ import styles from "./SearchButtons.module.scss";
 
 const SearchButtons = (props) => {
   const {
-    abvCheck,
+    isAbvCheck,
     setAbvCheck,
-    classicCheck,
+    isClassicCheck,
     setClassicCheck,
-    acidicCheck,
+    isAcidicCheck,
     setAcidicCheck,
   } = props;
 
@@ -17,7 +17,7 @@ const SearchButtons = (props) => {
         <input
           name="filter"
           type="radio"
-          value={abvCheck}
+          value={isAbvCheck}
           onClick={() => {
             setAbvCheck(true);
           }}
@@ -29,7 +29,7 @@ const SearchButtons = (props) => {
         <input
           name="filter"
           type="radio"
-          value={classicCheck}
+          value={isClassicCheck}
           onClick={() => setClassicCheck(true)}
         />
         Classic Beers
@@ -39,7 +39,7 @@ const SearchButtons = (props) => {
         <input
           name="filter"
           type="radio"
-          value={acidicCheck}
+          value={isAcidicCheck}
           onClick={() => setAcidicCheck(true)}
         />
         Acidic Beers
