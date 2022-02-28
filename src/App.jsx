@@ -5,8 +5,7 @@ import SideNav from "./components/SideNav";
 
 import {
   fetchBeers,
-  abvFetch,
-  classicFetch,
+  beerFilterFetch,
   acidicFetch,
   beerFilterFetch,
 } from "./services/beers.service";
