@@ -7,7 +7,6 @@ import {
   fetchBeers,
   beerFilterFetch,
   acidicFetch,
-  beerFilterFetch,
 } from "./services/beers.service";
 
 const App = () => {
